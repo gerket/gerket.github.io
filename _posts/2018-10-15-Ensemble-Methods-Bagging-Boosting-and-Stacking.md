@@ -42,7 +42,7 @@ np.random.seed(0)
 ```
 
 ### Bagging (Bootstrap Aggregation)
-<img src='../images/2018-10-15-Ensemble-Methods:-Bagging-Boosting-and-Stacking/bootstrap_concept.png' alt='Graphic that shows how multiple training data sets can be created from one original dataset'>
+<img src='../images/2018-10-15-Ensemble-Methods-Bagging-Boosting-and-Stacking/bootstrap_concept.png' alt='Graphic that shows how multiple training data sets can be created from one original dataset'>
 
 This graphic helps to demonstrate the idea behind bootstrapping. Bootstrapping is the process by which we can take one dataset and create multiple different datasets to use when training our models. In order to do this we pick out a number of observations at random (with replacement) from our original dataset. The result is multiple subsets of the original data with each having the potential for missing or duplicated observations.
 
