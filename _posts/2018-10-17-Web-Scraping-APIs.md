@@ -1,14 +1,12 @@
 ---
 layout: post
-title: Web Scraping - APIs
+title: Interacting with APIs
 ---
 
 
-This is a follow up to my [first post](https://gerket.github.io/Web-Scraping-HTML/) about web scraping with HTML. As previously discussed, web scraping is the act of pulling information directly off of the internet. This is an important skill to have as a data scientist because we won't always have the data that we want in clean, local databases or `.csv` files. Sometimes we'll have to get the data for ourselves. In the case of getting data from websites, we look to web scraping. Here I'm going to collect information about a specific Pokemon, Growlithe, from [pokeapi.co]( https://pokeapi.co).
+This is a follow up to my [first post](https://gerket.github.io/Web-Scraping-HTML/) about web scraping with HTML. As previously discussed, you can pull the HTML of the website directly and parse through that data. Another way to gather data is through the use of an API. An API, or Application Program Interface, is a tool made by the programmers of a website to help other programmers interact with their data or other aspects of their site. These are important skills to have as a data scientist because we won't always have the data that we want in clean, local databases or `.csv` files. Sometimes we'll have to get the data for ourselves. Here I'm going to collect information about a specific Pokemon, Growlithe, from [pokeapi.co]( https://pokeapi.co).
 
-There are multiple ways of scraping data off of the internet. Last time I discussed pulling the HTML of the website directly and parsing through that data. Another way to scrape data is through the use of an API. An API, or Application Program Interface, is a tool made by the programmers of a website to help other programmers interact with their data or other aspects of their site.
-
-So, first things first. We need to do our imports and set up the first few variables.  These first variables are the different components to our request url, the web address of the place we're trying to query data from.  
+So, first things first. We need to do our imports and set up the first few variables.  These first variables are the different components to our request url (the web address of the place we're trying to query data from).  
 
 ```python
 import requests
@@ -27,9 +25,9 @@ Outputs:
 'http://pokeapi.co/api/v2/pokemon/58'
 ```
 
-This is the website url that I'm going to request information from. I've broken the url down into its different components so that later on, if I want to get a different Pokemon or get information from a different part of the website, I won't have to change as much and there are less points of failure. Getting to this point does require some prior knowledge of the API. For one, you need to know it exists. You also need to know what you're looking for. In this case I also need to know Growlithe's pokedex number which, as I'm sure you already know, is 58.
+This is the website url that I'm going to request information from. I've broken the url down into its different components so that later on, if I want to get a different Pokemon or get information from a different part of the website, I won't have to change as much and there are less points of failure. Getting to this point does require some prior knowledge of the API. For one, you need to know it exists. You also need to know what you're looking for. In this case, I also need to know Growlithe's pokedex number which, as I'm sure you already know, is 58.
 
-Now that we have the initial import and url set up, it's time to get the data. To do this I am going to send a `GET` request to the url I just made. Assuming everything goes right, I should get a `.json` object back with all of the pertinant information I could want about Growlithe.
+Now that we have the initial import and url set up, it's time to get the data. To do this I am going to send a `GET` request to the url I just made. Assuming everything goes right, I should get a `.json` object back with all of the pertinent information I could want about Growlithe.
 
 ```python
 result = requests.get(endpoint)
