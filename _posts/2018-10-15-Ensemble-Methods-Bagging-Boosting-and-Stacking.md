@@ -50,7 +50,7 @@ The first type of ensemble method we're going to talk about is bagging. These mo
 
 Below is an example of how bagging methods are better than their base estimators using the iris dataset. I'm using a Decision Tree Classifier with a `max_depth` of 1 to help demonstrate how much of an effect bagging can have.
 
-```Python
+```python
 # Loading Data
 iris = datasets.load_iris()
 X, y = iris.data[:, 0:2], iris.target
@@ -111,7 +111,7 @@ Make predictions by predicting on each model and aggregating their weighted resu
 
 Below is a more concrete example of a boosting algorithm in action.
 
-```Python
+```python
 # Base Estimator
 clf = DecisionTreeClassifier(criterion='entropy', max_depth=1)
 
